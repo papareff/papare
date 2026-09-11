@@ -1,0 +1,18 @@
+# 基础配置
+model:
+  name: "Qwen/Qwen2-7B-Instruct"   # 仅作为参考，实际在 pipeline 中单独指定
+  device: "cuda"
+  max_length: 512
+  temperature: 0.7
+
+router:
+  mode: "length_based"
+  length_threshold: 100
+
+debate:
+  rounds: 2
+  use_retrieval: false
+
+dataset:
+  name: "sst2"
+  data_dir: "data/processed/"
